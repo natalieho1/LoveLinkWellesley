@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Love Link</title>
+  <style>
+    /* Basic reset and typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #333;
+      padding: 2rem;
+    /*background: #daef68;*/
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	
+	 background: repeating-linear-gradient(
+           0deg,
+           #fcfcf4,
+		   #fcfcf4 45px,
+          #e3ebfa 45px,
+          #e3ebfa 46px
+         );
+    
+	
+        
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      position: relative;
+    }
+
+
+    h1 {
+		font-family: "Emilys Candy", serif;
+  		font-weight: 400;
+  		font-style: normal;;
+      color: #E83C74;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+    h2 {
+      text-align: center;
+      color: #8f9aff;
+      margin-bottom: 2rem;
+	  font-family: "Emilys Candy", serif;
+    }
+
+	h3 {
+	font-family: "Emilys Candy", serif;
+	color: #ec407a;
+	font-size: 20px;
+	}
+
+    /* Form elements */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 20px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #ff8e59;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+    }
+    fieldset legend {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+      color: #555;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+    .radio-group label {
+      font-weight: normal;
+      color: #daef68;
+      cursor: pointer;
+    }
+    .radio-group input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    /* Optional “submit” button style */
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background-color: #E83C74;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #ec407a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+
+  <h1>Love Link</h1>
+  <h2>Find your perfect match on campus!</h2>
+
+  <form action="/submit" method="post">
+    <!-- Name & Email -->
+    <div>
+      <input type="text" id="name" name="name" placeholder="Enter your first & last name" />
+    </div>
+    <div>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+    </div>
+
+    <!-- Radio buttons: What are you looking for? -->
+	<h3> 1. What are you looking for? </h3>
+	<div>
+		<input type="radio" id="q1_option1" name="q1" value="1" required>
+		<label for="q1_option1">Someone to grab a meal with!</label>
+	</div>
+   
+	<div>
+		<input type="radio" id="q1_option2" name="q1" value="2">
+		<label for="q1_option2">A close friend/meaningful connection </label>
+	</div>
+	
+	<div>
+		<input type="radio" id="q1_option3" name="q1" value="3">
+		<label for="q1_option3">Interested in seeing somebody or a romantic relationship </label>
+	</div>
+
+	<div>
+		<input type="radio" id="q1_option4" name="q1" value="4">
+		<label for="q1_option4"> My twin flame, the love of my life, my future spouse, etc.</label>
+	</div>
+
+	<!-- Question 2 --> 
+	<h3> 2. How do you spend Marmon? </h3>
+	<div>
+		<input type="radio" id="q2_option1" name="q2" value="1" required>
+		<label for="q2_option1">PRE STARTS AT 7AM. You made jello shots for the occasion.</label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q2_option2" name="q2" value="2">
+		<label for="q2_option2">Cheer for the runners then go back to studying while kind of tipsy—at noon.</label>
+	</div>
+
+	<div>
+		<input type="radio" id="q2_option3" name="q2" value="3">
+		<label for="q2_option3">You sleep in and accidentally miss the entire event :(</label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q2_option4" name="q2" value="4">
+		<label for="q2_option4">You're running in the marathon.</label>
+	</div>
+
+	<!-- Question 3 --> 
+	<h3> 3. How often do you use sidechat?</h3>
+	<div>
+		<input type="radio" id="q3_option1" name="q3" value="1" required>
+		<label for="q3_option1"> Daily </label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q3_option2" name="q3" value="2">
+		<label for="q3_option2"> I have 1 million karma </label>
+	</div>
+
+	<div>
+		<input type="radio" id="q3_option3" name="q3" value="3">
+		<label for="q3_option3"> I check it once in a while, people complain too much on there</label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q3_option4" name="q3" value="4">
+		<label for="q3_option4"> What is sidechat...? <label>
+	</div>
+	
+   <!-- Question 4 --> 
+	<h3> 4. Where do you live? </h3>
+	<div>
+		<input type="radio" id="q4_option1" name="q4" value="1" required>
+		<label for="q4_option1"> East Side </label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q4_option2" name="q4" value="2">
+		<label for="q4_option2"> West Side </label>
+	</div>
+
+	<div>
+		<input type="radio" id="q4_option3" name="q4" value="3">
+		<label for="q4_option3"> You live in the french house near the golf course</label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q4_option4" name="q4" value="4">
+		<label for="q4_option4"> Off campus <label>
+	</div>
+
+	<!-- Question 5--> 
+	<h3> 5. Best academic building to sleep in?</h3>
+	<div>
+		<input type="radio" id="q5_option1" name="q5" value="1" required>
+		<label for="q5_option1"> Sci, on the couches in the data lounge </label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q5_option2" name="q5" value="2">
+		<label for="q5_option2"> Founders English Department Library </label>
+	</div>
+
+	<div>
+		<input type="radio" id="q5_option3" name="q5" value="3">
+		<label for="q5_option3"> Green Hall Suzy new house center </label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q5_option4" name="q5" value="4">
+		<label for="q5_option4"> Mods... <label>
+	</div>
+
+	 <!-- Question 6--> 
+	<h3> 6. Favorite dining hall ice cream flavor?</h3>
+	<div>
+		<input type="radio" id="q6_option1" name="q6" value="1" required>
+		<label for="q6_option1"> Graham Central </label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q6_option2" name="q6" value="2">
+		<label for="q6_option2"> Coffee </label>
+	</div>
+
+	<div>
+		<input type="radio" id="q6_option3" name="q6" value="3">
+		<label for="q6_option3"> Oatmazing vanilla</label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q6_option4" name="q6" value="4">
+		<label for="q6_option4"> Dark chocolate raspberry <label>
+	</div>
+
+	 <!-- Question 7 --> 
+	<h3> 7. The type of emojis that describe you </h3>
+	<div>
+		<input type="radio" id="q7_option1" name="q7" value="1" required>
+		<label for="q7_option1">🪴🔮🐌🏃‍♀️</label>
+	</div>
+
+	<div> 
+		<input type="radio" id="q7_option2" name="q7" value="2">
+		<label for="q7_option2">📱🗽🎸💅</label>
+	</div>
+
+	<div>
+		<input type="radio" id="q7_option3" name="q7" value="3">
+		<label for="q7_option3"> 🎮🍡🎧👾</label>
+	</div>
+
+	  <div>
+		<input type="radio" id="q7_option4" name="q7" value="4">
+		<label for="q7_option4"> 🎨🧶✍️🎭<label>
+	</div>
+
+	 <!-- Question 8 -->
+	 <h3> 8. What is your favorite place to study?</h3>
+	 <div>
+		 <input type="radio" id="q8_option1" name="q8" value="1" required>
+		 <label for="q8_option1">Science Center fourth floor in complete silence</label>
+	 </div>
+	 
+	 <div>
+		 <input type="radio" id="q8_option2" name="q8" value="2">
+		 <label for="q8_option2">I like to study outside! See me with a hammock or picnic blanket in Tower Court</label>
+	 </div>
+	 
+	 <div>
+		 <input type="radio" id="q8_option3" name="q8" value="3">
+		 <label for="q8_option3">Art History Library</label>
+	 </div>
+
+	 <div>
+		 <input type="radio" id="q8_option4" name="q8" value="4">
+		 <label for="q8_option4"> Hop on loco + study at cafes/BPL in Boston</label>
+	 </div>
+     
+
+    <!-- Submit -->
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

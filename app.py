@@ -93,7 +93,7 @@ def matches(match_id):
     session = Session()
     match = session.query(User).filter_by(user_id=match_id).first()
     session.close()
-    return render_template(app.static_folder,'matches.html', match=match)
+    return render_template('matches.html', match=match)
 
 def send_match_email(user_email, match_name, match_email):
     # Create an email message

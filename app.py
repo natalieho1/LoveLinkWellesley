@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from models import User, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -11,7 +11,12 @@ import os
 load_dotenv()
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__, static_folder='build', static_url_path='')
+
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+app = Flask(__name__, static_folder='build', static_url_path='')
+
 
 # Configure SQLite database
 engine = create_engine('sqlite:///matches.db')
@@ -20,9 +25,13 @@ Session = sessionmaker(bind=engine)
 
 # ----------------- Routes -----------------
 @app.route('/')
+def serve_index():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/')
 def home():
     """Welcome page with a 'Begin' button."""
-    return render_template('index.html')
+    return render_template(app.static_folder,'index.html')
 
 @app.route('/start', methods=['POST'])
 def start_questionnaire():

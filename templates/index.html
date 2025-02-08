@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine's Matchmaker</title>
+    <link rel="stylesheet" href="/love-link-wellesley-main/index.css">
+</head
+<body>
+    <div class="heart">
+    <h1>FIND YOUR NEW CRUSH -- OR FRIEND ❤️‍🔥</h1>
+    <p>Click below to find your perfect match:</p>
+    
+    <!-- Form that submits to a Flask route -->
+    <form action="{{ url_for('start_questionnaire') }}" method="POST">
+        <button type="submit">Begin Questionnaire</button>
+    </form>
+    </div>
+</body>
+</html>

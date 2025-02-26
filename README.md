@@ -61,17 +61,18 @@ A fun and interactive web app designed to match students at Wellesley College ba
 
 ### Frontend Setup
 1. Navigate to the React app directory
-```bash
 
 2. Install dependencies
 ```bash
-   npm install 
+npm install
+```
 3. Build the React app
 ```bash
-   npm run build 
+npm run build
+```
 4. Move the build/ folder to the root directory
 ```bash
-   mv build/ ../
-
+mv build/ ../
+```
 ### Acknowledgements 🙏
 - Built with ❤️ by Natalie, DeepSeek, and Lovable.dev
